@@ -4,6 +4,8 @@ import About from './About/About';
 import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
+import Particles from 'react-particles-js';
+import "../style/sections/_app.scss"
 
 import { PortfolioProvider } from '../context/context';
 
@@ -26,6 +28,26 @@ function App() {
 
   return (
     <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
+      <Particles
+        params={{
+          particles: {
+              number: {
+                  value: 120,
+                  density: {
+                    enable: true,
+                    value_area: 700
+                  }
+              },
+              shape: {
+                type: "circle",
+                stroke: {
+                  width: 6,
+                  color: "#f9ab00"
+                }
+              }
+          }
+        }}
+      />
       <Hero />
       <About />
       <Projects />

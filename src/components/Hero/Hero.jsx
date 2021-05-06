@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
+import Typed from "react-typed";
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
 
@@ -32,6 +33,23 @@ const Header = () => {
             {subtitle || "I'm the Unknown Developer."}
           </h1>
         </Fade>
+
+        <Typed 
+          className="type-text"
+          strings={[
+                    "Web Design", 
+                      "Web Development", 
+                      "Ruby on Rails",
+                      "React-Native.js",
+                      "React.js",
+                      "Python 3",
+                      "JavaScript",
+                      "CSS3",
+          ]}
+          typeSpeed={40}
+          backSpeed={50}
+          loop 
+        />
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
           <p className="hero-cta">
             <span className="cta-btn cta-btn--hero">
